@@ -19,4 +19,35 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color:#12161d;
+  color:white;
+}
+.e-bigger {
+    font-size: x-large;
+}
+
+.custom-rtb-group{
+    width:50%;
+}
+
+.e-btn-group.custom-rtb-group .e-btn{
+    width:50%;
+}
+
+custom-rtb-group label.e-btn{
+    box-shadow:none !important;
+    border:1px solid #fff;
+    background-color: rgb(34 43 51);
+    color:#fff;
+}
+
+.e-btn-group.custom-rtb-group input:checked + label.e-btn{
+    background-color:#fff;
+    color:#212b36;
+    border:1px solid #fff;
+}
+
+.widget{
+    border-radius:1rem;
+    background-color: #1a222b;
 }
