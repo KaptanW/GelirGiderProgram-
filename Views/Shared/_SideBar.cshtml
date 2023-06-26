@@ -1,0 +1,99 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    List<Object> menuItems = new List<Object>();
+
+    menuItems.Add(new
+    {
+        text = "General",
+        separator = true,
+    });
+    menuItems.Add(new
+    {
+        text = "Dashboard",
+        url = "/",
+        iconCss="fa-solid fa-box",
+        items = new List<Object>()
+        {
+            new { text = "Open"},
+            new { text = "Open"},
+            new { text = "Open"}
+        }
+    });
+
+
+    menuItems.Add(new
+    {
+        text = "Categories",
+        url = "/Category",
+        iconCss="fa-solid fa-folder-closed",
+        items = new List<Object>()
+        {
+            new { text = "Open"},
+            new { text = "Open"},
+            new { text = "Open"}
+        }
+    });
+
+    menuItems.Add(new
+    {
+        text = "Transactions",
+        iconCss = "fa-solid fa-arrow-right-arrow-left",
+        url = "/Transaction"
+    });
+
+    menuItems.Add(new
+    {
+        text = "Extras",
+        separator = true,
+    });
+
+    menuItems.Add(new
+    {
+        text = "Reports",
+        iconCss = "fa-solid fa-chart-simple",
+        url = "#"
+    });
+
+    menuItems.Add(new
+    {
+        text = "Settings",
+        iconCss = "fa-solid fa-gear",
+        url = "#"
+    });
+}
+
+
+<ejs-sidebar id="sidebar" width="290px" enableDock>
+    <e-content-template class="mt-5">
+        <div mt-5>
+        <div class="logo-wrapper">
+            <div class="app-logo">
+                    <img src="~/pngwing.com.png" />
+            </div>
+        </div>
+        <div class="profile-wrapper">
+            <img class="profile-pic" src="~/WhatsApp Image 2023-06-14 at 20.24.05.jpeg" />
+            <div class="titles d-flex flex-column ps-3">
+                <h6 class="mb-0">Wallet App</h6>
+                <span class="text-muted">Mehmet Kaptan</span>
+            </div>
+        </div>
+        <ejs-menu class="" id="menu" items="menuItems" orientation="Vertical" hamburgerMode>
+
+            </ejs-menu>
+
+        </div>
+    </e-content-template>
+</ejs-sidebar>
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded',funtion(){
+                dockBar = document.getElementById('sidebar').ej2.instances[0];
+                document.getElementById('sidebar-toggler').onlick = function(){
+                dockBar.toggle();
+                };
+            })
+        </script>

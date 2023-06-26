@@ -16,6 +16,8 @@ namespace GelirGiderProgramıASPNETCORE
 
             var app = builder.Build();
 
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1NGaF5cXmdCeUx0Q3xbf1xzZF1MYl9bQHZPMyBoS35RdUVlW3leeHZTQmNUWUdx");
+
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
@@ -33,7 +35,7 @@ namespace GelirGiderProgramıASPNETCORE
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Dashboard}/{action=Index}/{id?}");
 
             app.Run();
         }
